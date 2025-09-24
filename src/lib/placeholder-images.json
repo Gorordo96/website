@@ -1,0 +1,70 @@
+{
+  "placeholderImages": [
+    {
+      "id": "exp1-img1",
+      "description": "Sesión de arquitectura y planificación con el equipo de Plataformas en Stechs.",
+      "imageUrl": "/img/Trabajo-stechs1.jpeg",
+      "imageHint": "Equipo de Stechs en una sesión de brainstorming y estrategia."
+    },
+    {
+      "id": "exp1-img2",
+      "description": "Equipo de desarrollo en la oficina de Stechs en Río Cuarto.",
+      "imageUrl": "/img/Trabajo-stechs2.jpeg",
+      "imageHint": "Ambiente de trabajo colaborativo en las oficinas de Stechs Río Cuarto."
+    },
+    {
+      "id": "exp1-img3",
+      "description": "Foto del equipo completo de Stechs en un evento corporativo.",
+      "imageUrl": "/img/Trabajo-stechs3.jpeg",
+      "imageHint": "Equipo completo de Stechs en un encuentro anual."
+    },
+    {
+      "id": "exp2-img1",
+      "description": "Equipo de trabajo de Futit Services",
+      "imageUrl": "/img/Trabajo-futit.jpeg",
+      "imageHint": "Foto de equipo de trabajo en Escape Room, haciendo tareas de team building"
+    },
+    {
+      "id": "exp2-img2",
+      "description": "Colaboradores de Futit Services",
+      "imageUrl": "/img/Trabajo-futit2.jpeg",
+      "imageHint": "Foto de equipo en la oficina para release de Etendo"
+    },
+    {
+      "id": "exp3-img1",
+      "description": "Trabajo en el datacenter de Ascentio S.A",
+      "imageUrl": "/img/Trabajo-Ascentio.jpg",
+      "imageHint": "Ejecutando pruebas en el nuevo switch rackeado"
+    },
+    {
+      "id": "exp5-img1",
+      "description": "Trabajo de acompañamiento en las clases de robotica en el colegio Galileo Galilei",
+      "imageUrl": "/img/Trabajo-Colegio.jpg",
+      "imageHint": "Clases en el colegio Galileo Galilei"
+    },
+    {
+      "id": "exp6-img1",
+      "description": "Integrantes del grupo GSTR que dicto curso de arduino para estudiantes de 2do año en la UNRC",
+      "imageUrl": "/img/Imagen-Grupo-GSTR.jpg",
+      "imageHint": "Integrantes del grupo GSTR"
+    },
+    {
+      "id": "exp7-img1",
+      "description": "Viaje a Cordoba para presentar projecto en el SASE",
+      "imageUrl": "/img/Imagen-deteccion-Fuego.jpg",
+      "imageHint": "Viaje a Cordoba con los integrantes del GSTR"
+    },
+    {
+      "id": "exp8-img1",
+      "description": "Logo GSTR",
+      "imageUrl": "/img/GSTR-Logo.jpg",
+      "imageHint": "Logo GSTR"
+    },
+    {
+      "id": "exp8-img2",
+      "description": "Grupo GSTR",
+      "imageUrl": "/img/GSTR.jpg",
+      "imageHint": "Grupo GSTR"
+    }
+  ]
+}
