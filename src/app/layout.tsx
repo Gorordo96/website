@@ -1,10 +1,14 @@
 import type {Metadata} from 'next';
 import './globals.css';
 import { Toaster } from "@/components/ui/toaster";
+import { getAssetPath } from "@/lib/utils";
 
 export const metadata: Metadata = {
   title: 'Lucas Gorordo',
   description: 'Portfolio personal de Lucas Gorordo - Arquitecto de Soluciones e Ingeniero en Telecomunicaciones',
+  icons: {
+    icon: getAssetPath('/favicon.ico'),
+  },
 };
 
 export default function RootLayout({

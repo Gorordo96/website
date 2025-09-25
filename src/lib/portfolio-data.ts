@@ -1,21 +1,22 @@
 import type { PortfolioData } from './types';
 import { PlaceHolderImages } from './placeholder-images';
 import { PlaceHolderVideos } from './placeholder-videos';
+import { getAssetPath } from './utils';
 
 const findImage = (id: string) => {
     const img = PlaceHolderImages.find(p => p.id === id);
     if (!img) {
         return { url: 'https://picsum.photos/seed/fallback/600/400', hint: 'fallback' };
     }
-    return { url: img.imageUrl, hint: img.imageHint };
+    return { url: getAssetPath(img.imageUrl), hint: img.imageHint };
 }
 
 const findVideo = (id: string) => {
     const video = PlaceHolderVideos.find(p => p.id === id);
     if (!video) {
-        return { url: '/videos/fallback.mp4', hint: 'Video no encontrado' };
+        return { url: getAssetPath('/videos/fallback.mp4'), hint: 'Video no encontrado' };
     }
-    return { url: video.videoUrl, hint: video.videoHint };
+    return { url: getAssetPath(video.videoUrl), hint: video.videoHint };
 }
 
 export const portfolioData: PortfolioData = {
