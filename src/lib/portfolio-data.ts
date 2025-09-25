@@ -49,22 +49,77 @@ export const portfolioData: PortfolioData = {
   ],
   courses: [
     {
-      title: "Advanced TypeScript",
+      title: "Observability in Cloud Native apps using OpenTelemetry",
       institution: "Udemy",
-      certificateUrl: "#",
+      certificateUrl: "https://udemy-certificate.s3.amazonaws.com/pdf/UC-f290924e-97e6-48b0-9ff2-e5879e473589.pdf",
     },
     {
-      title: "Next.js & React - The Complete Guide",
-      institution: "Academind",
-      certificateUrl: "#",
+      title: "Python TOTAL - Programador Avanzado en 16 dias",
+      institution: "Udemy",
+      certificateUrl: "https://udemy-certificate.s3.amazonaws.com/pdf/UC-f9906ebc-41f9-4255-8649-26e1093d6281.pdf",
     },
-     {
-      title: "Google Cloud Certified - Professional Cloud Architect",
-      institution: "Google Cloud",
-      certificateUrl: "#",
+    {
+      title: "Become a Product Manager, without obstacles",
+      institution: "Alaimo Labs",
+      certificateUrl: "https://alaimolabs.com/en/certificates/3b20d869-1869-4616-84bc-0d6c23dc7097",
     },
+    {
+      title: "Jenkins, de cero a experto: conviertete en un Jenkins Master",
+      institution: "Udemy",
+      certificateUrl: "https://udemy-certificate.s3.amazonaws.com/pdf/UC-f1d6debb-134b-46d8-b1ee-8dcfb880cbc3.pdf"
+    },
+    {
+      title: "2023 Red Hat Customer Test Drive Workshop - Ansible for Red Hat Enterprise Linux",
+      institution: "Red Hat",
+      certificateUrl: "https://www.credly.com/badges/131739cf-3496-4c69-add6-bee52ed54d2f/public_url"
+    },
+    {
+      title: "Curso de Ansible: Automatización de principiante a experto",
+      institution: "Udemy",
+      certificateUrl: "https://www.udemy.com/certificate/UC-e2599006-3abc-4a21-9f74-8339a9ce1601/"
+    },
+    {
+      title: "Creacion de reportes con JasperReport y JasperStudio",
+      institution: "Udemy",
+      certificateUrl: "https://www.udemy.com/certificate/UC-c3cc0ece-21a7-4bd6-91dd-0d70c719013a/"
+    },
+    {
+      title: "Curso de fundamentos de base de datos",
+      institution: "Platzi",
+      certificateUrl: "https://platzi.com/p/gorordo96/curso/1566-bd/diploma/detalle/"
+    },
+    {
+      title: "Curso de Administración de Servidores Linux",
+      institution: "Platzi",
+      certificateUrl: "https://platzi.com/p/gorordo96/curso/1667-linux/diploma/detalle/"
+    }
   ],
   experience: [
+    {
+      id: "exp0",
+      role: " Desarrollador Freelance",
+      company: "",
+      dates: "Septiembre 2025",
+      summary: "",
+      detailedDescription: `
+####  Landing Page y Sistema de Reservas para Estudio Jurídico
+
+Desarrollé una solución web integral y a medida para un estudio jurídico local, con el objetivo de establecer su presencia digital y automatizar por completo su proceso de agendamiento de consultas.
+
+Mis responsabilidades y los entregables clave del proyecto fueron:
+
+* **Diseño y Desarrollo de Landing Page**: Creé una landing page con un diseño moderno, limpio y profesional, optimizada para dispositivos móviles (responsive). La página fue diseñada para comunicar claramente los servicios del estudio y guiar a los visitantes hacia la acción de reservar una consulta.
+* **Implementación de Sistema de Reservas Automatizado**: Integré una plataforma de agendamiento de turnos online que permite a los potenciales clientes ver la disponibilidad en tiempo real de los abogados y reservar una cita en pocos clics, eliminando la necesidad de coordinación manual vía teléfono o email.
+
+**Sitio Web:** [https://estudioayg.github.io/webpage/](https://estudioayg.github.io/webpage/)
+
+
+
+
+
+`,
+      media: []
+    },
     {
       id: "exp1",
       role: "Arquitecto de Soluciones",
