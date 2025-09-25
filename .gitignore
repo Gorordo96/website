@@ -15,6 +15,7 @@ node_modules
 *.lcov
 
 # next.js
+_next
 /.next/
 /out/
 
