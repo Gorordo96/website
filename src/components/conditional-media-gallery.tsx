@@ -1,9 +1,11 @@
 "use client";
 
+import React, { useState, useRef, useEffect } from "react";
 import Image from "next/image";
 import { Carousel, CarouselContent, CarouselItem, CarouselNext, CarouselPrevious } from "@/components/ui/carousel";
 import { Card, CardContent } from '@/components/ui/card';
 import type { Experience } from "@/lib/types";
+import type { CarouselApi } from "@/components/ui/carousel";
 
 // Helper function to determine if a path is a URL or local path
 const isUrl = (path: string): boolean => {
@@ -11,13 +13,41 @@ const isUrl = (path: string): boolean => {
 };
 
 export function ConditionalMediaGallery({ experience }: { experience: Experience | null }) {
+  const [api, setApi] = useState<CarouselApi>();
+  const [currentSlide, setCurrentSlide] = useState(0);
+  const [isAnimating, setIsAnimating] = useState(false);
+
   if (!experience?.media || experience.media.length === 0) {
     return null;
   }
 
+  // Handle carousel selection change
+  const handleSelect = (api: CarouselApi) => {
+    if (!api) return;
+
+    setIsAnimating(true);
+    setCurrentSlide(api.selectedScrollSnap());
+
+    // Wait for animation to complete before allowing metadata load
+    setTimeout(() => {
+      setIsAnimating(false);
+    }, 300); // Adjust based on carousel animation duration
+  };
+
+  useEffect(() => {
+    if (!api) return;
+
+    api.on("select", () => handleSelect(api));
+    handleSelect(api); // Set initial state
+
+    return () => {
+      api?.off("select", () => handleSelect(api));
+    };
+  }, [api]);
+
   return (
     <div className="my-6">
-      <Carousel className="w-full max-w-[85vw] sm:max-w-lg mx-auto">
+      <Carousel setApi={setApi} className="w-full max-w-[85vw] sm:max-w-lg mx-auto">
         <CarouselContent>
           {experience.media.map((item, index) => (
             <CarouselItem key={index}>
@@ -40,7 +70,7 @@ export function ConditionalMediaGallery({ experience }: { experience: Experience
                         src={item.url}
                         controls
                         className="w-full h-full object-cover"
-                        preload="metadata"
+                        preload={index === currentSlide && !isAnimating ? "metadata" : "none"}
                       >
                         Tu navegador no soporta el elemento video.
                       </video>
