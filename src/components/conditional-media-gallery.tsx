@@ -17,21 +17,21 @@ export function ConditionalMediaGallery({ experience }: { experience: Experience
 
   return (
     <div className="my-6">
-      <Carousel className="w-full max-w-lg mx-auto">
+      <Carousel className="w-full max-w-[85vw] sm:max-w-lg mx-auto">
         <CarouselContent>
           {experience.media.map((item, index) => (
             <CarouselItem key={index}>
-              <div className="p-1">
+              <div className="p-0.5 sm:p-1">
                 <Card>
-                  <CardContent className="flex aspect-video items-center justify-center p-0 overflow-hidden rounded-lg">
+                  <CardContent className="flex aspect-video items-center justify-center p-0 overflow-hidden rounded-lg relative max-w-full">
                     {item.type === 'image' && (
                        <Image
                          src={item.url}
                          alt={`${experience.role} at ${experience.company} - asset ${index + 1}`}
-                         width={600}
-                         height={400}
+                         fill
+                         sizes="(max-width: 768px) 90vw, (max-width: 1024px) 500px, 600px"
                          data-ai-hint={item.hint}
-                         className="object-cover w-full h-full"
+                         className="object-cover"
                          unoptimized={isUrl(item.url)}
                        />
                     )}
@@ -51,8 +51,8 @@ export function ConditionalMediaGallery({ experience }: { experience: Experience
             </CarouselItem>
           ))}
         </CarouselContent>
-        <CarouselPrevious className="ml-14" />
-        <CarouselNext className="mr-14" />
+        <CarouselPrevious className="-left-2 sm:-left-12" />
+        <CarouselNext className="-right-2 sm:-right-12" />
       </Carousel>
     </div>
   );

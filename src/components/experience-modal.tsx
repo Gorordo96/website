@@ -29,14 +29,14 @@ export function ExperienceModal({ experience, isOpen, onClose }: ExperienceModal
 
   return (
     <Dialog open={isOpen} onOpenChange={handleOpenChange}>
-      <DialogContent className="sm:max-w-3xl max-h-[90vh]">
+      <DialogContent className="w-[95vw] max-w-[95vw] sm:max-w-3xl max-h-[95vh] m-2 p-4 sm:p-6">
         <DialogHeader>
           <DialogTitle className="text-2xl font-headline">{experience.role}</DialogTitle>
           <DialogDescription>
             {experience.company} &middot; {experience.dates}
           </DialogDescription>
         </DialogHeader>
-        <ScrollArea className="max-h-[70vh] -mx-6 px-6">
+        <ScrollArea className="max-h-[60vh] landscape:max-h-[50vh] -mx-4 sm:-mx-6 px-4 sm:px-6">
           <div className="py-4">
              <ConditionalMediaGallery experience={experience} />
              <MarkdownRenderer content={experience.detailedDescription} />
